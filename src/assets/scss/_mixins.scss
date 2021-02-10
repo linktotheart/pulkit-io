@@ -1,0 +1,34 @@
+@mixin button {
+    padding: .625rem 1.875rem;
+    border: 2px solid $orange;
+    color: $orange;
+    letter-spacing: .75px;
+    font-weight: 600;
+    position: relative;
+    transition: 0.43s ease;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -25%;
+        width: 0%;
+        bottom: 0;
+        background: $orange;
+        transition: 0.3s ease;
+        z-index: -1;
+        transform: skew(45deg);
+        transform-origin: center;
+    }
+
+    &:hover{
+        color: $white;
+        &::before{
+            width: 150%;
+            left: -20%;
+            right: unset;
+        }
+    }
+}

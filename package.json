@@ -1,0 +1,17 @@
+{
+  "name": "pulkit-io",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/source-datocms": "^0.3.0",
+    "gridsome": "^0.7.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.0.0",
+    "sass-loader": "^7.3.1"
+  }
+}
