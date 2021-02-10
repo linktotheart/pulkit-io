@@ -4,7 +4,10 @@
       <div class="row align-items-center">
         <div class="col-lg-6">
           <div class="inner">
-            <h1 class="hero-title">Hi, I am a Hero Title.</h1>
+            <h1
+              class="hero-title"
+              v-html="$page.allDatoCmsHomepage.edges.node.heroTitle"
+            />
             <p class="lead">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Reprehenderit quo eum quis?
@@ -22,7 +25,17 @@
     </div>
   </div>
 </template>
-
+<page-query>
+query {
+  allDatoCmsHomepage{
+    edges{
+      node{
+        title
+      }
+    }
+  }
+}
+</page-query>
 <script>
 export default {
   name: "Header",

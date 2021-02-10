@@ -5,13 +5,13 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'Pulkit',
   plugins: [
     {
       use: '@gridsome/source-datocms',
       options: {
         apiToken: '847f0358846af3f2f4f3f8e098fb05', // required
-        previewMode: false,
+        previewMode: true,
         apiUrl: 'https://site-api.datocms.com',
         typeName: 'DatoCms'
       }
