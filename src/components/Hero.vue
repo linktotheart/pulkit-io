@@ -6,13 +6,26 @@
           <div class="inner">
             <h1
               class="hero-title"
-              v-html="$page.allDatoCmsHomepage.edges.node.heroTitle"
+              v-html="
+                $static.prismicio.allHomepages.edges[0].node.hero_title[0].text
+              "
             />
-            <p class="lead">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reprehenderit quo eum quis?
-            </p>
-            <g-link to="/contact" class="button"> Say Hello! </g-link>
+            <p
+              class="lead"
+              v-html="
+                $static.prismicio.allHomepages.edges[0].node.hero_content[0]
+                  .text
+              "
+            />
+            <g-link
+              v-for="buttons in $static.prismicio.allHomepages.edges[0].node
+                .buttons"
+              :key="buttons.id"
+              :to="{buttons.button_link}"
+              class="button"
+            >
+              Say Hello!
+            </g-link>
           </div>
         </div>
         <div class="col-lg-6">
@@ -25,17 +38,25 @@
     </div>
   </div>
 </template>
-<page-query>
-query {
-  allDatoCmsHomepage{
-    edges{
-      node{
-        title
+<static-query>
+query{
+	prismicio{
+    allHomepages{
+      edges{
+        node{
+            hero_title
+            hero_image
+            hero_content
+            buttons{
+            button_text
+            button_link
+          }
+        }
       }
     }
   }
 }
-</page-query>
+</static-query>
 <script>
 export default {
   name: "Header",
