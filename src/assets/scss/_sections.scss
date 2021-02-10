@@ -1,0 +1,20 @@
+.hero {
+    margin-top: 1rem;
+    min-height: 90vh;
+    position: relative;
+    align-items: center;
+    display: flex;
+  
+    .hero-title {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+    }
+    .lead{
+        margin-bottom: 1.5rem;
+    }
+  
+    .button {
+        @include button;
+        width: auto;
+    }
+  }
