@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "@gridsome/source-datocms": "^0.3.0",
-    "gridsome": "^0.7.0"
+    "gridsome": "^0.7.0",
+    "gridsome-source-graphql-prismic": "^0.1.6"
   },
   "devDependencies": {
     "node-sass": "^4.0.0",
