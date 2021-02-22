@@ -1,6 +1,6 @@
-# Default starter for Gridsome
+# New Personal Portfolio Template 🥳
 
-This is the project you get when you run `gridsome create new-project`.
+> Made in gridsome, vue and lil sass.
 
 ### 1. Install Gridsome CLI tool if you don't have
 
